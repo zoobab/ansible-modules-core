@@ -66,6 +66,7 @@ options:
         file does not exist
 notes:
   - "This module depends on the I(passlib) Python library, which needs to be installed on all target systems."
+  - "If you want to avoid installing the passlib library on remote target systems, you can also use "delegate_to: 127.0.0.1" and then copy the generated file."
   - "On Debian, Ubuntu, or Fedora: install I(python-passlib)."
   - "On RHEL or CentOS: Enable EPEL, then install I(python-passlib)."
 requires: [ passlib>=1.6 ]
@@ -94,8 +95,16 @@ EXAMPLES = """
     name: alex
     password: oedu2eGh
     crypt_scheme: md5_crypt
-"""
 
+# Template locally and copy the file over (avoid remote passlib dependency):
+- htpasswd:
+    path: /tmp/htpasswd
+    name: alex
+    password: oedu2eGh
+    crypt_scheme: md5_crypt
+  delegate_to: 127.0.0.1
+- copy: src=/tmp/htpasswd dest=/etc/myapp/htpasswd mode=0644
+"""
 
 import os
 import tempfile
