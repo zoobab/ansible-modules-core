@@ -1,4 +1,5 @@
 [![noswpatv3](http://zoobab.wdfiles.com/local--files/start/noupcv3.jpg)](https://ffii.org/donate-now-to-save-europe-from-software-patents-says-ffii/)
+[![noswpatv3](http://zoobab.wdfiles.com/local--files/start/noupcv3.jpg)](https://ffii.org/donate-now-to-save-europe-from-software-patents-says-ffii/)
 [![Build Status](https://api.shippable.com/projects/573f79d02a8192902e20e34e/badge?branch=devel)](https://app.shippable.com/projects/573f79d02a8192902e20e34e)
 
 ansible-modules-core
